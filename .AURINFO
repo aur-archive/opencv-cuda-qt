@@ -1,0 +1,39 @@
+pkgbase = opencv-cuda-qt
+	pkgdesc = Open Source Computer Vision Library with CUDA and QT5 support. SSE4.1 is enabled.
+	pkgver = 2.4.10
+	pkgrel = 5
+	url = http://opencv.org/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = python2-numpy
+	makedepends = mesa
+	makedepends = eigen2
+	makedepends = v4l-utils
+	depends = intel-tbb
+	depends = openexr
+	depends = xine-lib
+	depends = libdc1394
+	depends = gtkglext
+	depends = cuda
+	depends = qt5-base
+	depends = gstreamer
+	depends = ffmpeg
+	optdepends = eigen2
+	optdepends = libcl: For coding with OpenCL
+	optdepends = python2-numpy: Python 2.x interface
+	provides = opencv=$pkgver
+	provides = opencv-samples
+	conflicts = opencv
+	conflicts = opencv-samples
+	source = http://downloads.sourceforge.net/opencvlibrary/opencv-2.4.10.zip
+	source = pkgconfig-cuda32.patch
+	source = pkgconfig-cuda64.patch
+	md5sums = ec63952d3a3dff965d5fdde765926821
+	md5sums = 85eba7635880fe6c45828e8684ef47e0
+	md5sums = 766954b1451898f8a274903aa46d6388
+
+pkgname = opencv-cuda-qt
+	options = staticlibs
+
